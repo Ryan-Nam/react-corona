@@ -27,7 +27,7 @@ const Contents = () => {
   // 마운트되었을때 바로 실행하는 효과를 주기 위해
   useEffect(() => {
     const fetchEvents = async () => {
-      const res = await axios.get("https://api.covid19api.com/total/dayone/country/kr")
+      const res = await axios.get("https://api.covid19api.com/total/dayone/country/au")
       makeData(res.data)
     }
     const makeData = (items) => {
@@ -125,12 +125,12 @@ const Contents = () => {
   }, [])   // !!!****** Important , '[]' must use, other wise, borwser will keep bring api data
   return (
     <section>
-        <h2>국내 코로나 현황</h2>
+        <h2>Coronavirus (COVID-19) case numbers and statistics</h2>
         <div className="contents">
           <div>
             <Bar data={confirmedData} options={
               { 
-                title: { display: true, text: "누적확진자 추아", fontSize: 16 },
+                title: { display: true, text: "Total: cases ", fontSize: 16 },
                 legend: { display: true, position: "bottom" },
               }
           } />
