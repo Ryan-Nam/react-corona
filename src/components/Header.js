@@ -5,8 +5,8 @@ const header = () => {
     <header className="header">
         <h1>COVID-19</h1>
         <select>
-          <option>Korea</option>
           <option>Australia</option>
+          <option>Korea</option>
         </select>
       </header>
   );
